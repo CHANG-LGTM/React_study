@@ -1,0 +1,52 @@
+/* #root 요소의 스타일 정의: 콘텐츠를 가운데 정렬하고 최대 너비 설정 */
+#root {
+  max-width: 1280px;
+  margin: 0 auto; /* 중앙 정렬 */
+  padding: 2rem;
+  text-align: center;
+}
+
+/* 로고 스타일 정의: 높이와 패딩 설정, 필터 전환 효과 추가 */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter; /* 성능 최적화를 위한 설정 */
+  transition: filter 300ms;
+}
+
+/* 로고에 마우스를 올렸을 때 그림자 효과 */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/* React 로고에 특화된 마우스 오버 시 그림자 색상 효과 */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* 로고 회전 애니메이션 키프레임 정의 */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 사용자의 모션 감도 설정에 따라 로고 회전 애니메이션 활성화 */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* 카드 요소 스타일 정의: 콘텐츠 영역에 패딩 추가 */
+.card {
+  padding: 2em;
+}
+
+/* 문서 링크 안내 텍스트 스타일 정의 */
+.read-the-docs {
+  color: #888;
+}
